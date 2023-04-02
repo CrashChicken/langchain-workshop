@@ -5,7 +5,7 @@ import { CallbackManager } from "langchain/callbacks";
 import promptSync from "prompt-sync";
 import { chat } from "./01-chat.js";
 config();
-const prompt = promptSync();
+const prompt = promptSync({ sigint: true });
 
 const openAIApiKey = process.env.OPENAI_API_KEY;
 

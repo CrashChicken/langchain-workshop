@@ -7,7 +7,7 @@ import {
 import promptSync from "prompt-sync";
 
 export async function chat(model: ChatOpenAI) {
-  const prompt = promptSync();
+  const prompt = promptSync({ sigint: true });
 
   const messages = [
     new SystemChatMessage(
