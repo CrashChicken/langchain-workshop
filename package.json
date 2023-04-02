@@ -13,8 +13,12 @@
     "@dqbd/tiktoken": "^1.0.2",
     "dotenv": "^16.0.3",
     "esm": "^3.2.25",
+    "js-yaml": "^4.1.0",
     "langchain": "^0.0.45",
     "pdfjs-dist": "^3.4.120",
     "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@types/prompt-sync": "^4.2.0"
   }
 }
