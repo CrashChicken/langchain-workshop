@@ -6,7 +6,7 @@ import {
 } from "langchain/schema";
 import promptSync from "prompt-sync";
 
-export async function chat(model: ChatOpenAI) {
+export async function chat(model) {
   const prompt = promptSync({ sigint: true });
 
   const messages = [

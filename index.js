@@ -1,9 +1,9 @@
 import { ChatOpenAI } from "langchain/chat_models";
 
 import { config } from "dotenv";
-import { CallbackManager } from "langchain/callbacks";
 import promptSync from "prompt-sync";
 import { chat } from "./01-chat.js";
+import { analyzeDocument } from "./02-document.js";
 config();
 const prompt = promptSync({ sigint: true });
 
@@ -19,11 +19,18 @@ const model = new ChatOpenAI({
   openAIApiKey,
 });
 
-const input = prompt("Select example number: ");
-switch (input) {
-  case "1":
-    await chat(model);
-    break;
-  default:
-    console.log("Invalid input");
+async function main() {
+  const input = prompt("Select example number: ");
+  switch (input) {
+    case "1":
+      await chat(model);
+      break;
+    case "2":
+      await analyzeDocument(model);
+      break;
+    default:
+      console.log("Invalid input");
+  }
 }
+
+main();
