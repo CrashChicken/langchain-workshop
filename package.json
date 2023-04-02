@@ -1,0 +1,23 @@
+{
+  "name": "langchain-workshop",
+  "version": "1.0.0",
+  "description": "Workshop showing how LangChain simplifies development of LLM powered apps.",
+  "type": "module",
+  "rootDir": "src",
+  "scripts": {
+    "start": "tsc && node dist/index.js"
+  },
+  "author": "Jan Gradič",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "@types/prompt-sync": "^4.2.0",
+    "typescript": "^5.0.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "esm": "^3.2.25",
+    "langchain": "^0.0.45",
+    "prompt-sync": "^4.2.0"
+  }
+}
